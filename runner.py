@@ -21,7 +21,8 @@ if __name__ == "__main__":
     scripts_to_run = [
         "download.py",
         "parsing.py",
-        "csv_maker.py"
+        "csv_maker.py",
+        "analysis.py"
     ]
     
     print("Starting the WB Election 2026 Automation Pipeline")
