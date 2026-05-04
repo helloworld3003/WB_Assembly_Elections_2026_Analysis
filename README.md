@@ -11,6 +11,7 @@ The tool circumvents standard bot-blocking mechanisms using TLS impersonation an
 - **Advanced Excel Reports**: Parses HTML using `BeautifulSoup4` to generate a wide-format `.xlsx` file detailing the top 3 candidates per constituency, complete with margins and conditional formatting.
 - **Dashboard Generation**: Automatically builds an Excel summary dashboard sheet tracking "Leading/Won" seats per party.
 - **Master Backup**: Generates a raw `.csv` backup comprising every single candidate's individual EVM and Postal vote counts across all 294 constituencies.
+- **Automated Statistical Analysis**: Generates 8 premium visualizations answering questions regarding victory margins, NOTA impact, EVM vs Postal disparities, and constituency competitiveness.
 - **Resume Capability**: Tracks fully counted constituencies in a text file to skip re-downloading them on subsequent runs.
 
 ## Project Structure
@@ -19,13 +20,15 @@ The tool circumvents standard bot-blocking mechanisms using TLS impersonation an
 - `download.py`: Handles the stealth concurrent downloading of HTML pages into the `eci_html_files/` directory.
 - `parsing.py`: Parses the raw HTML to extract the Top 3 candidates and builds the formatted `WB_Election_Results_2026.xlsx`.
 - `csv_maker.py`: Parses the raw HTML to dump every single candidate across all regions into `WB_Election_Master_Backup_2026.csv`.
+- `analysis.py`: Performs data analysis on the master CSV, generating premium plots into the `analysis_plots/` folder.
+- `analysis.md`: Contains the final written conclusions based on the statistical data.
 
 ## Prerequisites
 
 You need Python 3 installed along with the following packages:
 
 ```bash
-pip install pandas beautifulsoup4 curl_cffi xlsxwriter
+pip install pandas beautifulsoup4 curl_cffi xlsxwriter matplotlib seaborn
 ```
 
 ## Usage
@@ -40,10 +43,13 @@ This will automatically:
 1. Download any missing or updated constituency HTML files.
 2. Parse the results and update the `.xlsx` dashboard.
 3. Update the master `.csv` backup.
+4. Execute `analysis.py` to produce statistical graphs in `analysis_plots/`.
 
 ## Outputs
 
 - `WB_Election_Results_2026.xlsx`: Formatted top-3 candidate tracking and party dashboard.
 - `WB_Election_Master_Backup_2026.csv`: Complete unformatted data containing all candidates and their specific vote breakdowns.
+- `analysis_plots/`: Directory containing the generated `.png` graphs (margins, NOTA, postal votes, etc.).
+- `analysis.md`: Markdown file containing written answers to the core analytical questions.
 - `eci_html_files/`: Directory containing the locally cached raw HTML source files for all 294 constituencies.
 - `completed_constituencies.txt`: Internal tracker to cache constituencies where 100% of the counting rounds are complete.
