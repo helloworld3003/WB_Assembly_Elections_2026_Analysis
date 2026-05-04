@@ -154,25 +154,25 @@ if len(nota_exceeds_margin) > 0:
     plt.close()
 
 # 2B: Scatter Plot of NOTA vs Margin with Shaded Danger Zone
-plt.figure(figsize=(10, 8))
-plt.scatter(q2_df['Victory Margin'], q2_df['NOTA Votes'], alpha=0.7, color='teal', edgecolor='black', s=50)
+# plt.figure(figsize=(10, 8))
+# plt.scatter(q2_df['Victory Margin'], q2_df['NOTA Votes'], alpha=0.7, color='teal', edgecolor='black', s=50)
 
-# Shade the area where NOTA > Margin
-max_val = max(q2_df['Victory Margin'].max(), q2_df['NOTA Votes'].max())
-plt.plot([0, max_val], [0, max_val], 'r--', linewidth=2, label='NOTA = Victory Margin')
-plt.fill_between([0, max_val], [0, max_val], [max_val, max_val], color='red', alpha=0.1, label='Danger Zone (NOTA > Margin)')
+# # Shade the area where NOTA > Margin
+# max_val = max(q2_df['Victory Margin'].max(), q2_df['NOTA Votes'].max())
+# plt.plot([0, max_val], [0, max_val], 'r--', linewidth=2, label='NOTA = Victory Margin')
+# plt.fill_between([0, max_val], [0, max_val], [max_val, max_val], color='red', alpha=0.1, label='Danger Zone (NOTA > Margin)')
 
-plt.xlim(0, q2_df['Victory Margin'].quantile(0.95)) # Cap at 95th percentile to zoom in on the important area
-plt.ylim(0, q2_df['NOTA Votes'].max() + 500)
-plt.title('Victory Margin vs NOTA Votes (Zoomed to 95th Percentile)')
-plt.xlabel('Victory Margin')
-plt.ylabel('NOTA Votes')
-plt.legend(loc='upper right')
-plt.grid(alpha=0.3)
-plt.tight_layout()
-plt.savefig(os.path.join(output_dir, 'q2b_nota_scatter.png'), dpi=300)
-plt.close()
-print("Saved: q2a_nota_flipped_seats.png, q2b_nota_scatter.png")
+# plt.xlim(0, q2_df['Victory Margin'].quantile(0.95)) # Cap at 95th percentile to zoom in on the important area
+# plt.ylim(0, q2_df['NOTA Votes'].max() + 500)
+# plt.title('Victory Margin vs NOTA Votes (Zoomed to 95th Percentile)')
+# plt.xlabel('Victory Margin')
+# plt.ylabel('NOTA Votes')
+# plt.legend(loc='upper right')
+# plt.grid(alpha=0.3)
+# plt.tight_layout()
+# plt.savefig(os.path.join(output_dir, 'q2b_nota_scatter.png'), dpi=300)
+# plt.close()
+# print("Saved: q2a_nota_flipped_seats.png, q2b_nota_scatter.png")
 
 
 # ==========================================
