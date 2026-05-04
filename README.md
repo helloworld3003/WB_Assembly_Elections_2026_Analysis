@@ -1,5 +1,5 @@
 # West Bengal Assembly Elections 2026 Data Scraper
-📊 [Data Analysis & Insights](ANALYSIS.md)
+📊 [Data Analysis & Insights](analysis.md)
 
 An automated Python pipeline designed to scrape, parse, and compile the 2026 West Bengal Assembly Election results directly from the Election Commission of India (ECI) website. 
 
