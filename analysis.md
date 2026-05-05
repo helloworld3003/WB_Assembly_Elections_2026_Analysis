@@ -13,7 +13,7 @@ The 2026 West Bengal Assembly Election counting is complete, and the final pipel
     2.  **Dabgram-Fulbari:** 97,715 vote margin
     3.  **English Bazar:** 93,784 vote margin
     
-*   **Battlegrounds (Low-Margin):** Conversely, the most fiercely contested nail-biter elections saw extremely slim margins, including a near-perfect tie in **Falta** (won by the INC with a 0-vote lead pending recount) and a razor-thin 401-vote victory for the BJP in **Satgachhia**.
+*   **Battlegrounds (Low-Margin):** Conversely, the most fiercely contested nail-biter elections saw extremely slim margins a razor-thin 401-vote victory for the BJP in **Satgachhia**.
 
 ---
 
